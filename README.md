@@ -7,8 +7,6 @@ The script extracts the date-time EXIF information and camera model and builds a
 new filename based on the attributes in the form:
 	YYYY-MM-DD HH-MM-SS camera_make.jpg
 
-* the reason for camera_make is to separate 
-
 This script assumes the folder structure:
 	./YYYY/MM/
 

@@ -19,7 +19,10 @@ end
 
 # Loop through each image in the specified directory
 Dir.glob('./*.{JPG,jpg}') do |photo|
+
   file = fileStuff(photo)
+
+  # Build the destination directory for the file move
   new_filename = "../#{file['parent']}/#{file['child']}/#{file['name']}"
 
   #Move the file only if there is not an existing image with the same name in the destination
