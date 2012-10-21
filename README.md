@@ -11,7 +11,7 @@ This script assumes the folder structure:
 	./YYYY/MM/
 
 The parent direction, ., contains a staging directory, at the same level as the YYYY directories,
-in which unprocessed images are stored.
+in which unprocessed images are stored and from where the script is run. (future updates to run from anywhere!)
 
 #Requires
 EXIFR gem - install using:
