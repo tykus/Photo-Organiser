@@ -1,4 +1,5 @@
 require 'exifr'
+require 'time'
 
 def fileStuff(a_photo)
   # Instantiate a new EXIFR::JPEG object 
@@ -17,8 +18,8 @@ def fileStuff(a_photo)
   return {'name'=>new_name, 'parent'=>parent_dir, 'child'=>child_dir}
 end
 
-# Loop through each image in the specified directory
-Dir.glob('./*.{JPG,jpg}') do |photo|
+# Loop through each image in current and every sub-directory of the current directory
+Dir.glob('./**/*.{JPG, jpg}') do |photo|
 
   file = fileStuff(photo)
 
