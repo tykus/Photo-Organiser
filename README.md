@@ -13,6 +13,10 @@ This script assumes the folder structure:
 The parent direction, ., contains a staging directory, at the same level as the YYYY directories,
 in which unprocessed images are stored and from where the script is run. (future updates to run from anywhere!)
 
+#Execution
+In the image staging directory:
+	ruby organiser.rb
+
 #Requires
 EXIFR gem - install using:
-gem install exifr
+	gem install exifr
