@@ -7,6 +7,8 @@ def fileStuff(a_photo)
   
   # Extract date/time and camera make EXIF data from the image object
   photo_date = Time.parse(this_photo.date_time.to_s)
+  rescue ArgumentError
+	photo_date = Time.parse(this_photo.date_time_original.to_s)
   photo_camera = this_photo.make.to_s
   
   # Build the new filename based on the extracted data in the form YYYY-MM-DD HH-MM-SS CAMERA_MAKE.jpg
@@ -19,8 +21,8 @@ def fileStuff(a_photo)
 end
 
 # Loop through each image in current and every sub-directory of the current directory
-Dir.glob('./**/*.{JPG, jpg}') do |photo|
-
+photo_files = File.join("**", "*.{JPG,jpg}")
+Dir.glob(photo_files) do |photo|
   file = fileStuff(photo)
 
   # Build the destination directory for the file move
